@@ -6,13 +6,13 @@ import Time from './time';
 
 
 function App() {
-  const lat = 40.8682;
-  const long = -73.8787;
+  const lat = 40.7143;
+  const long = -74.006;
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      
+
       await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(result => {
@@ -35,13 +35,13 @@ function App() {
            ): (
               <div></div>
            )}
-        </div> 
-        
-        
-        
+        </div>
+
+
+
 
       </header>
-      
+
     </div>
   );
 }
